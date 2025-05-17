@@ -13,7 +13,7 @@
    
     taskList.appendChild(newtask);
     newtask.textContent= taskInput.value;
-    let span = document.createElement("span");
+    let  span = document.createElement("span");
     span.innerHTML="delete";
     newtask.appendChild(span);
 
@@ -33,6 +33,7 @@ taskList.addEventListener("click", function(e){
 
     if(e.target.tagName==="SPAN"){
           e.target.parentElement.remove();
+          savedata();
     }
 
 }, false
